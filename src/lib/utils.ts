@@ -1,4 +1,3 @@
-/* eslint-disable import-helpers/order-imports */
 import { type ClassValue, clsx } from 'clsx'
 import { twMerge } from 'tailwind-merge'
 

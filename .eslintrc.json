@@ -19,28 +19,8 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": [
-    "@typescript-eslint",
-    "react",
-    "prettier",
-    "eslint-plugin-import-helpers"
-  ],
+  "plugins": ["@typescript-eslint", "react", "prettier"],
   "rules": {
-    "react/react-in-jsx-scope": "off",
-    "import-helpers/order-imports": [
-      "warn",
-      {
-        // example configuration
-        "newlinesBetween": "always",
-        "groups": [
-          ["/^react/", "/^next/", "/^@react/"],
-          "module",
-          "components",
-          "/^@shared/",
-          ["parent", "sibling", "index"]
-        ],
-        "alphabetize": { "order": "asc", "ignoreCase": true }
-      }
-    ]
+    "react/react-in-jsx-scope": "off"
   }
 }
