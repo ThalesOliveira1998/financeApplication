@@ -24,11 +24,11 @@ As documentações recebidas do cliente podem ser acessadas em: https://github.c
  - Docker latest
 
 ### Clonagem do projeto
-- SSH: [git@github.com:ThalesOliveira1998/financeApplication.git](git@github.com:ThalesOliveira1998/financeApplication.git)
-- HTTPS: [https://github.com/ThalesOliveira1998/financeApplication.git](https://github.com/ThalesOliveira1998/financeApplication.git)
+- SSH: git@github.com:ThalesOliveira1998/financeApplication.git
+- HTTPS: https://github.com/ThalesOliveira1998/financeApplication.git
 
 ### Execucação do projeto localmente
-Navegue até o diretório do projeto e execute o comando de terminal
+Em seu computador, navegue até o diretório do projeto clonado e execute o seguinte comando de terminal
 ```bash
 npm install
 ```
@@ -55,6 +55,7 @@ Acesse o endereço abaixo com seu navegador de internet para visualizar o projet
 2. O que deve ser feito pelo código
 3. Quais as expectativa do teste
 
+Exemplo:
 ```javascript
 describe("delete controller", () => { //1
     const api = AxiosInstance.generate();
