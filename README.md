@@ -1,11 +1,8 @@
 
 # Aplicação financeira
-
 Esse repositório foi criado para o desafio da formação de desenvolvedores da Cod3r.
 
-
-# Como participar
-
+## Como participar
 Para participar do repositório envie uma mensagem no canal do discord para thalesoliveira6115
 
 ## Canais do discord
