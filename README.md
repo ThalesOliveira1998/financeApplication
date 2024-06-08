@@ -8,28 +8,31 @@ Esse repositório foi criado para o desafio da formação de desenvolvedores da 
 
 Para participar do repositório envie uma mensagem no canal do discord para thalesoliveira6115
 
-## Canal do discord
-canal geral - sinta-se livre para contar piadas e reclamar da vida
-requisitos do projeto - tire dúvidas sobre os requisitos com o PO e stakeholders
-features - tire dúvidas e peça ajuda sobre sua feature em desenvolvidmento
-bugs - tire dúvidas e peça ajuda sobre seu bug em desenvolvidmento
-
+## Canais do discord
+- Geral: Sinta-se livre para contar piadas e reclamar da vida
+- Requisitos do projeto: Tire dúvidas sobre os requisitos com o PO e stakeholders
+- Features: Tire dúvidas e peça ajuda sobre sua feature em desenvolvidmento
+- Bugs: Tire dúvidas e peça ajuda sobre seu bug em desenvolvidmento
 
 ## Documentação
-As documentações recebidas do cliente podem ser acessadas em : https://github.com/especialistadev/projetos-equipes-1/tree/main/app-financeira
+As documentações recebidas do cliente podem ser acessadas em: https://github.com/especialistadev/projetos-equipes-1/tree/main/app-financeira
 
-### Requisitos de configuração
- - Node v>= 18.0
- - Test-Node-Dev global
+## Configuração
+### Requisitos
+ - Node versão 18.0 ou superior instalado
+ - ts-node-dev instalado globalmente
  - Docker latest
 
-### Clonagem do repositório e execucação do projeto
- - git clone xxxxxxx
- - navegue até o diretório do projeto e execute
-   ```bash
-     npm install
-   ```
-- execute o projeto:
+### Clonagem do projeto
+- SSH: [git@github.com:ThalesOliveira1998/financeApplication.git](git@github.com:ThalesOliveira1998/financeApplication.git)
+- HTTPS: [https://github.com/ThalesOliveira1998/financeApplication.git](https://github.com/ThalesOliveira1998/financeApplication.git)
+
+### Execucação do projeto localmente
+Navegue até o diretório do projeto e execute o comando de terminal
+```bash
+npm install
+```
+Execute o projeto:
 ```bash
 npm run dev
 # or
@@ -39,30 +42,34 @@ pnpm dev
 # or
 bun dev
 ```
-To open pgAdmin and access the project database, just access the address [http://localhost:8081](http://localhost:8081) with your browser
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse o endereço abaixo com seu navegador de internet para abrir o pgAdmin e acessar o banco de dados do projeto:<br>
+[http://localhost:8081](http://localhost:8081)
 
-### Documentação de testes
+Acesse o endereço abaixo com seu navegador de internet para visualizar o projeto:<br>
+[http://localhost:3000](http://localhost:3000)
 
-Os testes devem manter o padrão do framework JEST.
- - Descreva o que está sendo testado
- - O que deve ser feito pelo código
- - E qual a expectativa do teste
+## Documentação de testes
 
-```<code>
-describe("delete controller", () => {
+### A escrita dos testes deve manter o seguinte padrão:
+1. Descreva o que está sendo testado
+2. O que deve ser feito pelo código
+3. Quais as expectativa do teste
+
+```javascript
+describe("delete controller", () => { //1
     const api = AxiosInstance.generate();
 
-    test("should delete an existing user", async () => {
+    test("should delete an existing user", async () => { //2
         const headers: any = await Authorization.getHeaders();
-        const { status, data } = await api.delete("/user/delete", {
+        const { status, message } = await api.delete("/user/delete", {
             headers,
             data: {
                 email: users.validCredentials.email
             }
         });
 
-        expect(status).toBe(200);
+        expect(status).toBe(200); //3
+        expect(message).toBe("Usuário excluído com sucesso"); //3
     });
 });
 ```  
