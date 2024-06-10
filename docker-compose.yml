@@ -3,12 +3,12 @@ version: 'latest'
 services:
   postgres:
     image: postgres:latest
-    env_file: .env.development
+    env_file: ./.env.development
     container_name: postgres
-    environment:
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-      POSTGRES_DB: db_aplicacao_financeira
+    #    environment:
+    #      POSTGRES_USER: ${POSTGRES_USER}
+    #      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    #      POSTGRES_DB: db_aplicacao_financeira
     ports:
       - '5432:5432'
     volumes:
@@ -18,10 +18,11 @@ services:
 
   pgadmin:
     image: dpage/pgadmin4:latest
+    env_file: ./.env.development
     container_name: pgadmin
-    environment:
-      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
-      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+    #    environment:
+    #      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+    #      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
     ports:
       - '8081:80'
     depends_on:
