@@ -1,0 +1,36 @@
+.container {
+    height: 100vh;
+    background-color: #18181A;
+    border-radius: 0px 25px 25px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.moneySignalContainer,
+.profileContainer {
+    display: grid;
+    place-content: center;
+    height: 80px;
+}
+
+.moneySignalContainer {
+    border-radius: 0px 25px 0px 0px;
+    background-color: #7E22CD;
+}
+.moneySignal {
+    color: #fff;
+}
+
+.profileContainer {
+    border-top: solid 1px #535353b0;
+    border-radius: 0px 0px 25px 0px;
+}
+.profileImage {
+    content: "";
+    display: block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+}
