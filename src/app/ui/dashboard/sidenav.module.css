@@ -1,7 +1,7 @@
 .container {
     height: 100vh;
     background-color: #18181A;
-    border-radius: 0px 25px 25px 0px;
+    border-radius: 0px 30px 30px 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -15,16 +15,17 @@
 }
 
 .moneySignalContainer {
-    border-radius: 0px 25px 0px 0px;
+    border-radius: 0px 30px 0px 0px;
     background-color: #7E22CD;
 }
 .moneySignal {
+    font-size: 2.5rem;
     color: #fff;
 }
 
 .profileContainer {
     border-top: solid 1px #535353b0;
-    border-radius: 0px 0px 25px 0px;
+    border-radius: 0px 0px 30px 0px;
 }
 .profileImage {
     content: "";
