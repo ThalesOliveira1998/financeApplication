@@ -14,35 +14,39 @@ datasource db {
 }
 
 model Status {
-    id String @id @db.Uuid
-    nome String
-    financas Financa[]
+  id   String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  nome String
+
+  financas Financa[]
 }
 
 model Tipo_Financa {
-    id String @id @db.Uuid
-    nome String
-    financas Financa[]
+  id   String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  nome String
+
+  financas Financa[]
 }
 
 model Usuario {
-    id String @id @db.Uuid
-    nome_completo String
-    email String
-    senha String
-    path_imagem_perfil String
-    financas Financa[]
+  id                 String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  nome_completo      String
+  email              String
+  senha              String
+  path_imagem_perfil String
+
+  financas Financa[]
 }
 
 model Financa {
-    id String @id @db.Uuid
-    descricao String
-    valor Float
-    data DateTime
-    id_status String @db.Uuid
-    id_tipo_financa String @db.Uuid
-    id_usuario String @db.Uuid
-    status Status @relation(fields: [id_status], references: [id])
-    tipo_financa Tipo_Financa @relation(fields: [id_tipo_financa], references: [id])
-    usuario Usuario @relation(fields: [id_usuario], references: [id])
+  id              String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  descricao       String
+  valor           Float
+  data            DateTime
+  id_status       String   @db.Uuid
+  id_tipo_financa String   @db.Uuid
+  id_usuario      String   @db.Uuid
+
+  status       Status       @relation(fields: [id_status], references: [id])
+  tipo_financa Tipo_Financa @relation(fields: [id_tipo_financa], references: [id])
+  usuario      Usuario      @relation(fields: [id_usuario], references: [id])
 }
