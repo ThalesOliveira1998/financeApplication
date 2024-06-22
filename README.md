@@ -49,6 +49,7 @@ Acesse o endereço abaixo com seu navegador de internet para visualizar o projet
 Em seu computador, com o projeto executando (*npm run dev*) navegue até o diretório do projeto clonado e execute o seguinte comando de terminal
 ```bash
 npx prisma migrate dev
+```
 
 ## Documentação de testes
 
