@@ -45,6 +45,11 @@ Acesse o endereço abaixo com seu navegador de internet para abrir o pgAdmin e a
 Acesse o endereço abaixo com seu navegador de internet para visualizar o projeto:<br>
 [http://localhost:3000](http://localhost:3000)
 
+### Criação da base de dados local
+Em seu computador, com o projeto executando (*npm run dev*) navegue até o diretório do projeto clonado e execute o seguinte comando de terminal
+```bash
+npx prisma migrate dev
+
 ## Documentação de testes
 
 ### A escrita dos testes deve manter o seguinte padrão:
