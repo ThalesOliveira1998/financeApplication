@@ -24,7 +24,7 @@ const Sidebar = () => {
           </CommandItem>
           <CommandItem>
             <DollarSign className="mr-2 h-4 w-4" />
-            <Link href="/">Inserir registro</Link>
+            <Link href="/records">Registro financeiros</Link>
           </CommandItem>
           <CommandItem>outro menu</CommandItem>
         </CommandGroup>
