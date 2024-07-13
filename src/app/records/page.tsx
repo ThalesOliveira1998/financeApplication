@@ -7,13 +7,20 @@ import { FinancaModel } from '@/model/Financa'
 import { IconCoin, IconPlus } from '@tabler/icons-react'
 import { useEffect, useState } from 'react'
 import FinancaForm from '@/components/financa/FinancaForm'
+import { StatusModel } from '@/model/Status'
+import { TiposModel } from '@/model/Tipos'
 
 export default function Page() {
   const [financas, setFinancas] = useState<FinancaModel[]>([])
+  const [statusList, setstatusList] = useState<StatusModel[]>([])
+  const [tiposList, setTiposList] = useState<TiposModel[]>([])
+
   const [record, setRecord] = useState<Partial<FinancaModel> | null>(null)
 
   useEffect(() => {
     Controller.financa.getAll().then(setFinancas)
+    Controller.status.getAll().then(setstatusList)
+    Controller.tipo.getAll().then(setTiposList)
   }, [])
 
   async function salvar() {
@@ -34,6 +41,7 @@ export default function Page() {
     setRecord(null)
   }
 
+  // console.log(statusList)
   return (
     <>
       <Titulo
@@ -61,7 +69,13 @@ export default function Page() {
               Novo
             </button>
           </div>
-          <FinancasList records={financas} onClick={setRecord} />
+
+          <FinancasList
+            records={financas}
+            statusList={statusList}
+            tiposList={tiposList}
+            onClick={setRecord}
+          />
         </>
       )}
     </>
