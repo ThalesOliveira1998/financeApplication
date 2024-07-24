@@ -9,6 +9,9 @@ import { useEffect, useState } from 'react'
 import FinancaForm from '@/components/financa/FinancaForm'
 import { StatusModel } from '@/model/Status'
 import { TiposModel } from '@/model/Tipos'
+import Rodape from '@/components/Rodape'
+import { IconHeartFilled } from '@tabler/icons-react'
+import Logo from './path/to/your/logo.svg'
 
 export default function Page() {
   const [financas, setFinancas] = useState<FinancaModel[]>([])
@@ -48,6 +51,7 @@ export default function Page() {
         icone={IconCoin}
         principal="Registros"
         secundario="Listagem de registros"
+        style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#999' }}
       />
 
       {record ? (
@@ -62,11 +66,11 @@ export default function Page() {
         <>
           <div className="flex justify-end pb-4">
             <button
-              className="flex items-center gap-2 bg-blue-500 px-4 py-2 rounded-md"
+              className="flex items-center gap-2 bg-purple-500 px-4 py-2 rounded-lg text-white"
               onClick={() => setRecord({})}
             >
-              <IconPlus />
-              Novo
+              <IconPlus className="text-white" />
+              Novo Registro
             </button>
           </div>
 
