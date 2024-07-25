@@ -1,7 +1,7 @@
 import { FinancaModel } from '@/model/Financa'
 import InputText from '../InputText'
 import { useEffect, useState } from 'react'
-import Controller from '@/controller'
+import ControllerDB from '@/controller'
 import { StatusModel } from '@/model/Status'
 import SelectStatus from './SelectStatus'
 import { TiposModel } from '@/model/Tipos'
@@ -21,8 +21,8 @@ export default function FinancaForm(props: FinancaFormProps) {
   const [tiposRecords, setTiposRecords] = useState<TiposModel[]>([])
 
   useEffect(() => {
-    Controller.status.getAll().then(setstatusRecords)
-    Controller.tipo.getAll().then(setTiposRecords)
+    ControllerDB.status.getAll().then(setstatusRecords)
+    ControllerDB.tipo.getAll().then(setTiposRecords)
     //console.log(statusRecords)
   }, [])
 

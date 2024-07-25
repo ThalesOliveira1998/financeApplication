@@ -2,11 +2,11 @@
 
 import { FinancaModel } from '@/model/Financa'
 import FinancaRepository from './FinancaRepository'
-import Controller from '..'
+import ControllerDB from '..'
 
 export default async function FinancaSave(record: Partial<FinancaModel>) {
   if (!record.id) {
-    const user = await Controller.user.getFirst()
+    const user = await ControllerDB.user.getFirst()
     const newRecord = {
       ...record,
       id_usuario: record.id_usuario ?? user.id

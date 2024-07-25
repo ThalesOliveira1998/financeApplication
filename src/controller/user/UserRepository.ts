@@ -1,8 +1,10 @@
+import { prismaDB } from '@/lib/prisma'
 import { UserModel } from '@/model/User'
-import { PrismaClient } from '@prisma/client'
+// import { PrismaClient } from '@prisma/client'
 
 export default class UserRepository {
-  private static db: PrismaClient = new PrismaClient()
+  // private static db: PrismaClient = new PrismaClient()
+  private static db = prismaDB
 
   static async save(record: UserModel): Promise<UserModel> {
     return await this.db.usuario.upsert({
@@ -37,6 +39,11 @@ export default class UserRepository {
 
   static async getById(id: string): Promise<UserModel> {
     const usr = await this.db.usuario.findUnique({ where: { id } })
+    return usr as UserModel
+  }
+
+  static async getByEmail(email: string): Promise<UserModel> {
+    const usr = await this.db.usuario.findUnique({ where: { email } })
     return usr as UserModel
   }
 

@@ -28,11 +28,11 @@ model Tipo_Financa {
 }
 
 model Usuario {
-  id                 String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  id                 String  @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   nome_completo      String
-  email              String
+  email              String  @unique
   senha              String
-  path_imagem_perfil String
+  path_imagem_perfil String?
 
   financas Financa[]
 }

@@ -1,7 +1,7 @@
-import Controller from '@/controller'
+import ControllerDB from '@/controller'
 
 export default async function Teste() {
-  const dadosx = await Controller.financa.getAll()
+  const dadosx = await ControllerDB.financa.getAll()
 
   return (
     <>

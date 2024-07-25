@@ -1,7 +1,7 @@
-import logo from '@/img/logo_p.png'
+// import logo from '@/img/logo_p.png'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaDollarSign } from 'react-icons/fa'
+// import { FaDollarSign } from 'react-icons/fa'
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
 import {
   DropdownMenu,
@@ -12,6 +12,7 @@ import {
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu'
 import dollarIcon from '@/img/dollar.svg'
+import logout from '@/actions/logout'
 
 const Navbar = () => {
   return (
@@ -45,6 +46,12 @@ const Navbar = () => {
           <DropdownMenuSeparator className="border-t border-gray-200 my-2" />
           <DropdownMenuItem className="dropdown-item-hover px-4 py-2 transition-colors duration-150 ease-in-out ">
             <Link href="/profile">Perfil</Link>
+          </DropdownMenuItem>
+          <DropdownMenuSeparator className="border-t border-gray-200 my-2" />
+          <DropdownMenuItem className="dropdown-item-hover px-4 py-2 transition-colors duration-150 ease-in-out ">
+            <form action={logout}>
+              <button>Sair</button>
+            </form>
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>

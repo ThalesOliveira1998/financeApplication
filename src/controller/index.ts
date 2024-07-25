@@ -4,12 +4,14 @@ import FinancaSave from './financa/FinanceSave'
 import StatusDelete from './status/StatusDelete'
 import StatusGetAll from './status/StatusGetAll'
 import StatusSave from './status/StatusSave'
-import UserGetFirst from './status/user/UserGetFirst'
+import UserGetFirst from './user/UserGetFirst'
 import TipoDelete from './tipo/TipoDelete'
 import TipoGetAll from './tipo/TipoGetAll'
 import TipoSave from './tipo/TipoSave'
+import UserSave from './user/UserSave'
+import UserGetByEmail from './user/UserGetByEmail'
 
-export default class Controller {
+export default class ControllerDB {
   static readonly financa = {
     save: FinancaSave,
     getAll: FinancaGetAll,
@@ -29,6 +31,8 @@ export default class Controller {
   }
 
   static readonly user = {
-    getFirst: UserGetFirst
+    getFirst: UserGetFirst,
+    getByEmail: UserGetByEmail,
+    save: UserSave
   }
 }
