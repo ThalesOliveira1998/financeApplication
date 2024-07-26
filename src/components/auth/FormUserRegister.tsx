@@ -18,6 +18,7 @@ import { useState, useTransition } from 'react'
 import { registerSchema } from '@/lib/userZodSchema'
 import { UserRegisterAction } from '@/actions/authAction'
 import Titulo from '../template/Titulo'
+import Link from 'next/link'
 
 const FormUserRegister = () => {
   const [error, setError] = useState<string | null>(null)
@@ -46,7 +47,7 @@ const FormUserRegister = () => {
   }
 
   return (
-    <>
+    <div className="container py-40 relative flex-col items-center justify-center max-w-[450px]">
       <Titulo
         principal="Usuários"
         secundario="Cadastro de novo usuário"
@@ -115,8 +116,14 @@ const FormUserRegister = () => {
             </Button>
           </form>
         </Form>
+        <div className="mt-5 space-y-4">
+          Já possui uma conta?{' '}
+          <Link href="/login" className="underline">
+            Login
+          </Link>
+        </div>
       </div>
-    </>
+    </div>
   )
 }
 export default FormUserRegister

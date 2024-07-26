@@ -60,6 +60,7 @@ export const UserRegisterAction = async (
 
     return { success: true }
   } catch (error) {
+    console.log(error)
     if (error instanceof AuthError) {
       return { error: error.cause?.err?.message }
     }

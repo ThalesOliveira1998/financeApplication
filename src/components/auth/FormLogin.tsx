@@ -46,7 +46,7 @@ const FormLogin = () => {
   }
 
   return (
-    <>
+    <div className="container relative py-48 h-[600px] flex-col items-center justify-center max-w-[450px] ">
       <Titulo
         principal="Login"
         secundario=""
@@ -104,7 +104,7 @@ const FormLogin = () => {
           </Link>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 export default FormLogin
