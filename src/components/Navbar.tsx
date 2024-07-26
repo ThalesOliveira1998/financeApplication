@@ -13,8 +13,11 @@ import {
 } from '@/components/ui/dropdown-menu'
 import dollarIcon from '@/img/dollar.svg'
 import logout from '@/actions/logout'
+import { auth } from '@/lib/auth'
 
-const Navbar = () => {
+const Navbar = async () => {
+  const session = await auth()
+  //console.log('SESAO', session)
   return (
     <div className="bg-gray-900 text-white py-2 px-5 flex justify-between">
       <Link href="/">
@@ -41,7 +44,8 @@ const Navbar = () => {
         </DropdownMenuTrigger>
         <DropdownMenuContent className="bg-white shadow-lg rounded-lg p-2 mt-2 border border-gray-100">
           <DropdownMenuLabel className="px-4 py-2 text-gray-700 font-semibold">
-            Minha conta
+            {session?.user.nome_completo}
+            {/* Minha conta */}
           </DropdownMenuLabel>
           <DropdownMenuSeparator className="border-t border-gray-200 my-2" />
           <DropdownMenuItem className="dropdown-item-hover px-4 py-2 transition-colors duration-150 ease-in-out ">

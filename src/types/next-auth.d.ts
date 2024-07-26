@@ -5,16 +5,19 @@ declare module 'next-auth' {
   interface Session {
     user: {
       id?: string
+      nome_completo?: string
     } & DefaultSession['user']
   }
 
   interface User {
     id?: string
+    nome_completo?: string
   }
 }
 
 declare module 'next-auth/jwt' {
   interface JWT {
     id?: string
+    nome_completo?: string
   }
 }

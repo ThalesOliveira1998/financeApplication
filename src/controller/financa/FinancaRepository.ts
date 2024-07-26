@@ -1,3 +1,4 @@
+import { auth } from '@/lib/auth'
 import { FinancaModel } from '@/model/Financa'
 import { PrismaClient } from '@prisma/client'
 
@@ -28,14 +29,9 @@ export default class FinancaRepository {
   }
 
   static async getAll(): Promise<FinancaModel[]> {
+    const session = await auth()
     return await this.db.financa.findMany({
-      // include: {
-      //   status: {
-      //     select: {
-      //       nome: true
-      //     }
-      //   }
-      // }
+      where: { id_usuario: session?.user.id }
     })
   }
 

@@ -15,6 +15,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     jwt({ token, user }) {
       if (user) {
         token.id = user.id
+        token.nome_completo = user.nome_completo
       }
       return token
     },
@@ -22,6 +23,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     session({ session, token }) {
       if (session.user) {
         session.user.id = token.id!
+        session.user.nome_completo = token.nome_completo
       }
       return session
     }
