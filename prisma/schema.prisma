@@ -20,6 +20,7 @@ model Status {
   financas Financa[]
 }
 
+
 model Tipo_Financa {
   id   String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   nome String

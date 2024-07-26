@@ -7,9 +7,10 @@ export interface RodapeProps {
   secundario: string
   style?: React.CSSProperties
 }
+
 export default function Rodape(props: RodapeProps) {
   return (
-    <footer style={props.style}>
+    <footer className="footer-container" style={props.style}>
       <div
         className="
           flex justify-end items-center gap-2 bg-zinc-700 p-4

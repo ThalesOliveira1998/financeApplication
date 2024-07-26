@@ -5,7 +5,7 @@ import '@/app/globals.css'
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col items-center p-5">
+      <div className="background-texture flex flex-col items-center p-5">
         <section className="text-center my-10">
           <h2 className="text-xl text-white text-4xl mb-4">
             Bem vindo a sua plataforma de gerenciamento de registros financeiros
