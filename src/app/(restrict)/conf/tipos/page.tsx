@@ -1,3 +1,9 @@
+import Titulo from '@/components/template/Titulo'
+import { Button } from '@/components/ui/button'
+import { prismaDB } from '@/lib/prisma'
+import { IconStatusChange } from '@tabler/icons-react'
+import { revalidatePath } from 'next/cache'
+import Link from 'next/link'
 async function Home() {
   revalidatePath('/tipos')
   const dataTipos = await prismaDB.tipo_Financa.findMany()
@@ -37,12 +43,5 @@ async function Home() {
     </>
   )
 }
-
-import Titulo from '@/components/template/Titulo'
-import { Button } from '@/components/ui/button'
-import { prismaDB } from '@/lib/prisma'
-import { IconStatusChange } from '@tabler/icons-react'
-import { revalidatePath } from 'next/cache'
-import Link from 'next/link'
 
 export default Home

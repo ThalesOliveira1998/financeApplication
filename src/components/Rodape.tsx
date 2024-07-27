@@ -11,14 +11,9 @@ export interface RodapeProps {
 export default function Rodape(props: RodapeProps) {
   return (
     <footer className="footer-container" style={props.style}>
-      <div
-        className="
-          flex justify-end items-center gap-2 bg-zinc-700 p-4
-          text-zinc-400 text-sm
-        "
-      >
-        <Image src={logo} alt="Sistema Financeiro" width={30} />
-        {props.principal}
+      <div className="flex justify-between items-center gap-2 bg-zinc-700 p-4 text-zinc-400 text-sm w-full">
+        <Image src={logo} alt="Sistema Financeiro" width={30} height={30} />
+        <span>{props.principal}</span>
       </div>
     </footer>
   )
