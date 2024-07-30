@@ -15,12 +15,12 @@ const StatusTiposPage = () => {
       </section>
 
       <section className="w-full flex flex-col items-center">
-        <Link href="/conf/status" legacyBehavior>
+        <Link href="/conf/status/new" legacyBehavior>
           <a className="w-full md:w-auto bg-gradient-to-r from-purple-600 to-blue-500 text-white text-lg md:text-xl lg:text-2xl py-3 px-6 md:py-4 md:px-8 rounded-lg shadow-xl hover:opacity-90 transition-opacity transform hover:scale-105 mb-4 md:mb-6 lg:mb-8 text-center">
             Criar tipos de Status
           </a>
         </Link>
-        <Link href="/conf/tipos" legacyBehavior>
+        <Link href="/conf/tipos/new" legacyBehavior>
           <a className="w-full md:w-auto bg-gradient-to-r from-purple-600 to-blue-500 text-white text-lg md:text-xl lg:text-2xl py-3 px-6 md:py-4 md:px-8 rounded-lg shadow-xl hover:opacity-90 transition-opacity transform hover:scale-105 text-center">
             Criar tipos de registros
           </a>

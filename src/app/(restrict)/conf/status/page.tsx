@@ -18,7 +18,7 @@ export default async function Home() {
         secundario="tipos de status do sistema"
         className="text-white"
       />
-      <div className="bg-black min-h-screen py-10 px-4">
+      <div className=" min-h-screen py-10 px-4">
         <div className="container mx-auto">
           <div className="bg-gray-800 shadow-md rounded-lg p-6 text-white">
             <div className="flex mb-4">
