@@ -11,7 +11,7 @@ export interface FinancaRecordProps {
 }
 
 export default function FinancaRecord(props: FinancaRecordProps) {
-  console.log('STATUS:', props)
+  //console.log('STATUS:', props)
   return (
     <div
       className="grid grid-cols-5 gap-4 text-white bg-zinc-800 p-3 rounded-md cursor-pointer items-center"
