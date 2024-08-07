@@ -10,6 +10,7 @@ import TipoGetAll from './tipo/TipoGetAll'
 import TipoSave from './tipo/TipoSave'
 import UserSave from './user/UserSave'
 import UserGetByEmail from './user/UserGetByEmail'
+import UserGetById from './user/userGetById'
 
 export default class ControllerDB {
   static readonly financa = {
@@ -33,6 +34,7 @@ export default class ControllerDB {
   static readonly user = {
     getFirst: UserGetFirst,
     getByEmail: UserGetByEmail,
+    getById: UserGetById,
     save: UserSave
   }
 }

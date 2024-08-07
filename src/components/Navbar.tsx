@@ -46,7 +46,7 @@ const Navbar = async () => {
           </DropdownMenuLabel>
           <DropdownMenuSeparator className="border-t border-gray-200 my-2" />
           <DropdownMenuItem className="dropdown-item-hover px-4 py-2 transition-colors duration-150 ease-in-out ">
-            <Link href="/profile">Perfil</Link>
+            <Link href="/conf/perfil">Perfil</Link>
           </DropdownMenuItem>
           <DropdownMenuSeparator className="border-t border-gray-200 my-2" />
           <DropdownMenuItem className="dropdown-item-hover px-4 py-2 transition-colors duration-150 ease-in-out ">
